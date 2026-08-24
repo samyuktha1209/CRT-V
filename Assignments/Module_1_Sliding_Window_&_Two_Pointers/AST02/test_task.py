@@ -1,16 +1,16 @@
 import unittest
-from task import Check_Palindrome
+from task import countGoodSubstrings
 
 class TestAssignment(unittest.TestCase):
 
-    def test_single_digit(self):
-        self.assertEqual(Check_Palindrome(4,'abca'),True)
+    def test1(self):
+        self.assertEqual(countGoodSubstrings("xyzzaz"),1)
 
-    def test_multiple_digits(self):
-        self.assertEqual(Check_Palindrome(4,'batr'),False)
+    def test2(self):
+        self.assertEqual(countGoodSubstrings("aababcabc"),4)
 
-    def test_with_zero(self):
-        self.assertEqual(Check_Palindrome(5,'abcba'),True)
+    def test3(self):
+        self.assertEqual(countGoodSubstrings( "aaaaa"),0)
 
 if __name__ == "__main__":
     unittest.main()

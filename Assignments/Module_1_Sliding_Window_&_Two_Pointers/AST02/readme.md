@@ -1,33 +1,33 @@
-# Check Palindrome
-You are given a string (S).Your task is to determine if the string can be a palindrome after deleting at most one character from it.
+# Substrings of Size Three with Distinct Characters
 
-## Input Format
-The first line contains one integer n, the size of the string  
-line contains string S.
-
-## Output Format
-Print whether S can be made palindrome after deleting at most one character.
-
-## Constraints
-1≤∣S∣≤10 
+## Problem Statement
 ```
-Sample 1:
-Input :
-4
-abca
+A string is good if there are no repeated characters.
 
-Output : True
-Explanation:
-We can delete b or c to make it palindrome. after deleting b the S will be aca which is palindrome.
+Given a string s​​​​​, return the number of good substrings of length three in s​​​​​​.
 
-Sample 2:
-Input :
-4
-batr
+Note that if there are multiple occurrences of the same substring, every occurrence should be counted.
 
-Output : False
-Explanation:
-There is no way to make S palindrome after deleting at most 1 character.
+A substring is a contiguous sequence of characters in a string.
+
+Constraints:
+
+1 <= s.length <= 100
+s​​​​​​ consists of lowercase English letters.
+```
+### Example
+```
+Input: s = "xyzzaz"
+Output: 1
+
+Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz". 
+The only good substring of length 3 is "xyz".
+
+Input: s = "aababcabc"
+Output: 4
+
+Explanation: There are 7 substrings of size 3: "aab", "aba", "bab", "abc", "bca", "cab", and "abc".
+The good substrings are "abc", "bca", "cab", and "abc".
 ```
 ## Instructions
 1. Write your solution in `task.py`

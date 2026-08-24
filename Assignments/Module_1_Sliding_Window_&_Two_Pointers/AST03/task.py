@@ -1,13 +1,16 @@
-def countGoodSubstrings(s: str) -> int:
-    count = 0
+from typing import List
 
-    for i in range(len(s) - 2):
-        if s[i] != s[i + 1] and s[i] != s[i + 2] and s[i + 1] != s[i + 2]:
-            count += 1
+def The_Great_Run(N: int, k: int, arr: List[int]) -> int:
+    current_sum = sum(arr[:k])
+    max_sum = current_sum
+    for i in range(k, N):
+        current_sum += arr[i] - arr[i - k]
+        max_sum = max(max_sum, current_sum)
 
-    return count
+    return max_sum
 
 
 if __name__ == '__main__':
-    s = input()
-    print(countGoodSubstrings(s))
+    N, k = map(int, input().split())
+    path = list(map(int, input().split()))
+    print(The_Great_Run(N, k, path))

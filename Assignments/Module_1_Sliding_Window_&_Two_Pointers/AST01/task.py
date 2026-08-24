@@ -1,16 +1,26 @@
-from typing import List
+def Check_Palindrome(n: int, s: str) -> bool:
+    def is_palindrome(left, right):
+        while left < right:
+            if s[left] != s[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
 
-def The_Great_Run(N: int, k: int, arr: List[int]) -> int:
-    current_sum = sum(arr[:k])
-    max_sum = current_sum
-    for i in range(k, N):
-        current_sum += arr[i] - arr[i - k]
-        max_sum = max(max_sum, current_sum)
+    left = 0
+    right = n - 1
 
-    return max_sum
+    while left < right:
+        if s[left] != s[right]:
+            return is_palindrome(left + 1, right) or is_palindrome(left, right - 1)
+
+        left += 1
+        right -= 1
+
+    return True
 
 
 if __name__ == '__main__':
-    N, k = map(int, input().split())
-    path = list(map(int, input().split()))
-    print(The_Great_Run(N, k, path))
+    n = int(input())
+    s = input()
+    print(Check_Palindrome(n, s))

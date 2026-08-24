@@ -1,38 +1,38 @@
-# The Great Run
-```
-Vishal loves running. He often visits his favourite Nehru Park and runs for very long distances. On one such visit he found that the number of girls in the park was unusually high. Now he wants to use this as an opportunity to impress a large number of girls with his awesome speed.
+# Check Palindrome
+You are given a string (S).Your task is to determine if the string can be a palindrome after deleting at most one character from it.
 
-The track on which he runs is an N kilometres long straight path. There are a girls standing within the 
-ith kilometre of this path. A girl will be impressed only if Vishal is running at his maximum speed when he passes by her. But he can run at his best speed only for a single continuous stretch of K kilometres. Now Vishal wants to know what is the maximum number of girls that he can impress.
-```
-### Input
-```
-First line contains two space-separated integers 
-N and K, the length of the track and the maximum distance he can run at his best speed.
+## Input Format
+The first line contains one integer n, the size of the string  
+line contains string S.
 
-Second line contains N space-separated integers, the number of girls within each kilometre of the track.
-```
-### Output
-```
-For each test case print one line containing an integer, denoting the maximum number of girls Vishal can impress.
+## Output Format
+Print whether S can be made palindrome after deleting at most one character.
 
-Constraints
-1 ≤ T ≤ 10
-1≤K≤N≤100
-1≤ai≤100
+## Constraints
+1≤∣S∣≤10 
 ```
-### Example
-```
-Input : 7 2
-2 4 8 1 2 1 8
+Sample 1:
+Input :
+4
+abca
 
-Output : 12
-```
+Output : True
+Explanation:
+We can delete b or c to make it palindrome. after deleting b the S will be aca which is palindrome.
 
-### Instructions
+Sample 2:
+Input :
+4
+batr
+
+Output : False
+Explanation:
+There is no way to make S palindrome after deleting at most 1 character.
+```
+## Instructions
 1. Write your solution in `task.py`
 2. Do NOT modify `test_task.py`
 3. Run tests locally before pushing
 
-### Submission Rules
+## Submission Rules
 - Only `task.py` will be evaluated
