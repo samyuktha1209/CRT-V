@@ -33,9 +33,4 @@ list                                                  |  Linked List
 3.Circular Linked List
 
 
-
-
- 
-
-
 '''
